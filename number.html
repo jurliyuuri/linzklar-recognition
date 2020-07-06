@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="load">ロード中</div>
+<input type="button" id="seisei" value="生成">
+<div id="jis"></div>
+<script>
+let files;
+let rinzis = [];
+(async function(){
+	let filesfile = await fetch("./datalist.json");
+	files = await filesfile.json();
+	
+	let filearray = [];
+	await Promise.all(files.map(name=>(async function(){
+		let rinzifile = await fetch("./data/" + name);
+		let filerinzi = await rinzifile.json();
+		filearray.push(filerinzi);
+	})()));
+	rinzis = filearray.flat();
+	document.getElementById("load").innerText = "";
+})();
+
+document.getElementById("seisei").addEventListener("click",function(){
+	let jis = document.getElementById("jis");
+	jis.innerHTML = "";
+	
+	let rinzidat = new Map();
+	
+	for(let rinzi of rinzis){
+		if(rinzidat.get(rinzi.character) == undefined)rinzidat.set(rinzi.character, 0);
+		rinzidat.set(rinzi.character, 1+rinzidat.get(rinzi.character));
+	}
+	
+	let rinzientry = [...rinzidat.entries()].sort((a,b)=>a[1]-b[1]);
+	
+	for(let char of rinzientry) {
+		let div = document.createElement("div");
+		div.innerHTML = `${char[0]}\t${char[1]}<br>`;
+		jis.appendChild(div);
+	}
+});
+</script>
+</body>
+</html>

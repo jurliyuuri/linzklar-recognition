@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="load">ロード中</div>
+<input type="text" id="ji">
+<input type="button" id="seisei" value="生成">
+<div id="jis"></div>
+<script>
+let files;
+let rinzis = [];
+(async function(){
+	let filesfile = await fetch("./datalist.json");
+	files = await filesfile.json();
+	
+	let filearray = [];
+	await Promise.all(files.map(name=>(async function(){
+		let rinzifile = await fetch("./data/" + name);
+		let filerinzi = await rinzifile.json();
+		filearray.push(filerinzi);
+	})()));
+	rinzis = filearray.flat();
+	document.getElementById("load").innerText = "";
+})();
+
+document.getElementById("seisei").addEventListener("click",function(){
+	let jis = document.getElementById("jis");
+	jis.innerHTML = "";
+	
+	let inputrinzi = document.getElementById("ji").value;
+	rinzis.filter(x=>x.character == inputrinzi).forEach(rinzi=>{
+		let canvas = document.createElement("canvas");
+		canvas.setAttribute("width", "256px");
+		canvas.setAttribute("height", "256px");
+		jis.appendChild(canvas);
+		let context = canvas.getContext("2d");
+		context.strokeStyle = "white";
+		context.fillStyle = "white";
+		context.fillRect(0,0,512,512);
+		context.strokeStyle = "black";
+		context.fillStyle = "black";
+		
+		rinzi.data.forEach(kaku=>{
+			context.beginPath();
+			context.moveTo(kaku[0].x, kaku[0].y);
+			kaku.forEach(coord=>{
+				context.lineTo(coord.x, coord.y);
+			});
+			context.stroke();
+		});
+	});
+	
+});
+</script>
+</body>
+</html>

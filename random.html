@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="load">ロード中</div>
+<canvas id="hoge" width="512px" height="512px"></canvas><br>
+<div id="foo"></div>
+<button id="huga">生成</button>
+<script>
+let files;
+let rinzis = [];
+(async function(){
+	let filesfile = await fetch("./datalist.json");
+	files = await filesfile.json();
+	
+	let filearray = [];
+	await Promise.all(files.map(name=>(async function(){
+		let rinzifile = await fetch("./data/" + name);
+		let filerinzi = await rinzifile.json();
+		filearray.push(filerinzi);
+	})()));
+	rinzis = filearray.flat();
+	document.getElementById("load").innerText = "";
+})();
+
+document.getElementById("huga").addEventListener("click",function(){
+	let context = document.getElementById("hoge").getContext("2d");
+	context.strokeStyle = "white";
+	context.fillStyle = "white";
+	context.fillRect(0,0,512,512);
+	context.strokeStyle = "black";
+	context.fillStyle = "black";
+	
+	let rinzi = rinzis[Math.floor(Math.random()*rinzis.length)];
+	
+	document.getElementById("foo").innerText  = rinzi.character;
+	rinzi.data.forEach(kaku=>{
+		context.beginPath();console.log(kaku[0])
+		context.moveTo(kaku[0].x*2, kaku[0].y*2);
+		kaku.forEach(coord=>{
+			context.lineTo(coord.x*2, coord.y*2);
+		});
+		context.stroke();
+	});
+});
+</script>
+</body>
+</html>
