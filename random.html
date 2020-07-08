@@ -32,15 +32,31 @@ document.getElementById("huga").addEventListener("click",function(){
 	context.strokeStyle = "white";
 	context.fillStyle = "white";
 	context.fillRect(0,0,512,512);
-	context.strokeStyle = "black";
-	context.fillStyle = "black";
 	
 	let rinzi = rinzis[Math.floor(Math.random()*rinzis.length)];
 	
 	document.getElementById("foo").innerHTML = rinzi.character + getImage_(rinzi.character, ["SY", "jv", "SY pua2 man1", "noborder", "border"], 60, false, "http://jurliyuuri.com/lin-marn");
 	rinzi.data.forEach(kaku=>{
-		context.beginPath();console.log(kaku[0])
-		context.moveTo(kaku[0].x*2, kaku[0].y*2);
+		
+		if (kaku.length >= 2 && !rinzi.initialDotCaptured) {
+			const kakuneg1 = {
+				x: kaku[0].x - (kaku[1].x - kaku[0].x),
+				y: kaku[0].y - (kaku[1].y - kaku[0].y),
+			};
+			context.strokeStyle = "red";
+			context.fillStyle = "red";
+			context.beginPath();
+			context.moveTo(kakuneg1.x*2, kakuneg1.y*2);
+			context.lineTo(kaku[0].x*2, kaku[0].y*2);
+
+		} else {
+			context.strokeStyle = "black";
+			context.fillStyle = "black";
+			context.beginPath();
+			context.moveTo(kaku[0].x*2, kaku[0].y*2);
+		}
+		context.strokeStyle = "black";
+		context.fillStyle = "black";
 		kaku.forEach(coord=>{
 			context.lineTo(coord.x*2, coord.y*2);
 		});
