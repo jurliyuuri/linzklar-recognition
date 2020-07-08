@@ -5,7 +5,7 @@ Linzklar is a logographic writing system used mainly in [Faikleone](https://wiki
 
 ## Data format
 
-[/data](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data) contains all the raw data, where each JSON file is an array of `{ "character": (annotation), "data" : (array of array of {x: number, y: number}) }`. Each array of coordinates corresponds to a stroke; an array of strokes makes up a character.
+[/data](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data) contains all the raw data, where each JSON file is either an array of `{ "character": (annotation), "data" : (array of array of {x: number, y: number}) }`, or `{ "character": (annotation), "data" : (array of array of {x: number, y: number}), initialDotCaptured: true}`. Each array of coordinates corresponds to a stroke; an array of strokes makes up a character. Due to an oversight, for the first 30,000 characters the initial dot of every single stroke is absent from the data, and such files are marked with the lack of `initialDotCaptured: true`.
 
 ## Shuffle through the dataset
 [Shuffle through the dataset](http://jurliyuuri.com/linzklar-recognition/random.html).
