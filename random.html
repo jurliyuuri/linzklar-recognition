@@ -1,12 +1,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="http://jurliyuuri.com/lin-marn/image_table/char_and_folder_info.js"></script>
+<script src="http://jurliyuuri.com/lin-marn/image_table/image_existence_table.js"></script>
+<script src="http://jurliyuuri.com/lin-marn/image_table/get_image.js"></script>
 </head>
 <body>
 <div id="load">ロード中</div>
 <canvas id="hoge" width="512px" height="512px"></canvas><br>
 <div id="foo"></div>
-<button id="huga">生成</button>
+<button id="huga">表示</button>
 <script>
 let files;
 let rinzis = [];
@@ -29,14 +32,28 @@ document.getElementById("huga").addEventListener("click",function(){
 	context.strokeStyle = "white";
 	context.fillStyle = "white";
 	context.fillRect(0,0,512,512);
-	context.strokeStyle = "black";
-	context.fillStyle = "black";
 	
 	let rinzi = rinzis[Math.floor(Math.random()*rinzis.length)];
 	
-	document.getElementById("foo").innerText  = rinzi.character;
+	document.getElementById("foo").innerHTML = rinzi.character + getImage_(rinzi.character, ["SY", "jv", "SY pua2 man1", "noborder", "border"], 60, false, "http://jurliyuuri.com/lin-marn");
 	rinzi.data.forEach(kaku=>{
-		context.beginPath();console.log(kaku[0])
+		
+		if (kaku.length >= 2 && !rinzi.initialDotCaptured) {
+			const kakuneg1 = {
+				x: kaku[0].x - (kaku[1].x - kaku[0].x),
+				y: kaku[0].y - (kaku[1].y - kaku[0].y),
+			};
+			context.strokeStyle = "red";
+			context.fillStyle = "red";
+			context.beginPath();
+			context.moveTo(kakuneg1.x*2, kakuneg1.y*2);
+			context.lineTo(kaku[0].x*2, kaku[0].y*2);
+			context.stroke();
+		} 
+
+		context.strokeStyle = "black";
+		context.fillStyle = "black";
+		context.beginPath();
 		context.moveTo(kaku[0].x*2, kaku[0].y*2);
 		kaku.forEach(coord=>{
 			context.lineTo(coord.x*2, coord.y*2);
