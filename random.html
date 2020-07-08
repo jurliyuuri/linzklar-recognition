@@ -48,15 +48,13 @@ document.getElementById("huga").addEventListener("click",function(){
 			context.beginPath();
 			context.moveTo(kakuneg1.x*2, kakuneg1.y*2);
 			context.lineTo(kaku[0].x*2, kaku[0].y*2);
+			context.stroke();
+		} 
 
-		} else {
-			context.strokeStyle = "black";
-			context.fillStyle = "black";
-			context.beginPath();
-			context.moveTo(kaku[0].x*2, kaku[0].y*2);
-		}
 		context.strokeStyle = "black";
 		context.fillStyle = "black";
+		context.beginPath();
+		context.moveTo(kaku[0].x*2, kaku[0].y*2);
 		kaku.forEach(coord=>{
 			context.lineTo(coord.x*2, coord.y*2);
 		});
