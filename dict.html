@@ -40,8 +40,24 @@ document.getElementById("seisei").addEventListener("click",function(){
 		context.fillRect(0,0,512,512);
 		context.strokeStyle = "black";
 		context.fillStyle = "black";
-		
+
 		rinzi.data.forEach(kaku=>{
+		
+			if (kaku.length >= 2 && !rinzi.initialDotCaptured) {
+				const kakuneg1 = {
+					x: kaku[0].x - (kaku[1].x - kaku[0].x),
+					y: kaku[0].y - (kaku[1].y - kaku[0].y),
+				};
+				context.strokeStyle = "red";
+				context.fillStyle = "red";
+				context.beginPath();
+				context.moveTo(kakuneg1.x, kakuneg1.y);
+				context.lineTo(kaku[0].x, kaku[0].y);
+				context.stroke();
+			} 
+
+			context.strokeStyle = "black";
+			context.fillStyle = "black";
 			context.beginPath();
 			context.moveTo(kaku[0].x, kaku[0].y);
 			kaku.forEach(coord=>{
