@@ -19,7 +19,7 @@ let rinzis = [];
 			let rinzifile = await fetch("./data/" + name);
 			let filerinzi = await rinzifile.json();
 			filearray.push(filerinzi);
-		catch(e) {
+		} catch(e) {
 			console.log(e + " name = " + name);
 		}
 	})()));
