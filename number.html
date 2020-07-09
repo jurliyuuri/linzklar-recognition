@@ -15,9 +15,13 @@ let rinzis = [];
 	
 	let filearray = [];
 	await Promise.all(files.map(name=>(async function(){
-		let rinzifile = await fetch("./data/" + name);
-		let filerinzi = await rinzifile.json();
-		filearray.push(filerinzi);
+		try {
+			let rinzifile = await fetch("./data/" + name);
+			let filerinzi = await rinzifile.json();
+			filearray.push(filerinzi);
+		catch(e) {
+			console.log(e + " name = " + name);
+		}
 	})()));
 	rinzis = filearray.flat();
 	document.getElementById("load").innerText = "";
