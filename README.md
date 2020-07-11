@@ -15,6 +15,9 @@ This repository currently contains the dataset of hand-written linzklar (written
 
 [/data](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data) contains all the raw data, where each JSON file is either an array of `{ "character": (annotation), "data" : (array of array of {x: number, y: number}) }`, or `{ "character": (annotation), "data" : (array of array of {x: number, y: number}), initialDotCaptured: true}`. Each array of coordinates corresponds to a stroke; an array of strokes makes up a character. Due to an oversight, for the first 30,000 characters the initial dot of every single stroke is absent from the data, and such files are marked with the lack of `initialDotCaptured: true`.
 
+`/data_images/svg` contains all the raw data converted into svg images. `initial_dot_captured` contains the >20,000 characters whose initial dot of every stroke is properly recorderd. `
+initial_dot_omitted` is made up of >50,000 characters stripped off of their initial dots (unintentionally for the first 30,000; intentionally for the remaining data). `initial_dot_captured_or_augmented` is a folder containing all the images in `initial_dot_captured`, as well as the first 30,000 characters with each of the missing initial dot inferred (by a simple linear interporation) from the remaining dots.
+
 ## Shuffle through the dataset
 [Shuffle through the dataset](http://jurliyuuri.com/linzklar-recognition/random.html).
 
