@@ -1,7 +1,7 @@
 # linzklar-recognition
 
 ## What this is 
-Linzklar is a logographic writing system used mainly in [Faikleone](https://wikirlevip.miraheze.org/wiki/Faikleone), a [conworld](https://en.wikibooks.org/wiki/Conworld) the authors of this repository are building. 
+Linzklar (pronounced LINTS-claah), or Lanermic logogram, is a logographic writing system used mainly in [Faikleone](https://wikirlevip.miraheze.org/wiki/Faikleone), a [conworld](https://en.wikibooks.org/wiki/Conworld) the authors of this repository are building. 
 
 ![](DSC_1318-01.jpeg)
 
