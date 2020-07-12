@@ -33,6 +33,12 @@ $ cargo run --release
 ## Shuffle through the dataset
 [Shuffle through the dataset](http://jurliyuuri.com/linzklar-recognition/random.html).
 
+## Pairs that are expected to be difficult to distinguish
+* <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E8%8F%93.png" width="30" height="30"> `菓` and <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E7%B5%82.png" width="30" height="30"> `終`
+* <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F12/%E6%B0%8F.png" width="30" height="30"> `氏` and <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E6%9E%9C.png" width="30" height="30"> `果`
+* <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%B7%A6.png" width="30" height="30"> `左` and <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E8%80%8C.png" width="30" height="30"> `而`
+* <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%8F%97.png" width="30" height="30"> `受` and <img src="http://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E7%B5%B5.png" width="30" height="30"> `絵`
+
 ## これはなに
 燐字データセットのデータ集
  
