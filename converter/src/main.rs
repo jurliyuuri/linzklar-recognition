@@ -1,3 +1,4 @@
+#![warn(clippy::pedantic)]
 use std::fs::File;
 use std::io::prelude::*;
 
@@ -29,7 +30,7 @@ impl Sub for Coord {
     }
 }
 
-fn gen_svg(strokes: &Vec<Vec<Coord>>) -> String {
+fn gen_svg(strokes: &[Vec<Coord>]) -> String {
     let mut ans = r#"<?xml version="1.0" standalone="no"?>
     <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
     "#
@@ -127,7 +128,7 @@ fn write_svg(
     folder_name: &str,
     src: &str,
     i: usize,
-    strokes: &Vec<Vec<Coord>>,
+    strokes: &[Vec<Coord>],
 ) -> std::io::Result<()> {
     use std::fs;
     fs::create_dir_all(format!(
