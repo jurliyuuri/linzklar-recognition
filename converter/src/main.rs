@@ -55,7 +55,12 @@ fn main() -> std::io::Result<()> {
     let mut file = File::open("../datalist.json")?;
     let mut contents = String::new();
     file.read_to_string(&mut contents)?;
-    let filenames: Vec<String> = serde_json::from_str(&contents).unwrap();
+    let filenames: Vec<String> = serde_json::from_str(&contents).map_err(|_| {
+        std::io::Error::new(
+            std::io::ErrorKind::Other,
+            "Failed to interpret ../datalist.json",
+        )
+    })?;
 
     let mut total = 0;
 
@@ -63,7 +68,12 @@ fn main() -> std::io::Result<()> {
         let mut datasetfile = File::open(format!("../data/{}", src))?;
         let mut datasetcontents = String::new();
         datasetfile.read_to_string(&mut datasetcontents)?;
-        let characters: Vec<CharData> = serde_json::from_str(&datasetcontents).unwrap();
+        let characters: Vec<CharData> = serde_json::from_str(&datasetcontents).map_err(|_| {
+            std::io::Error::new(
+                std::io::ErrorKind::Other,
+                format!("Failed to interpret ../data/{}", src),
+            )
+        })?;
         println!("Converting {} characters in {}.", characters.len(), src);
         total += characters.len();
         for (i, c) in characters.iter().enumerate() {
