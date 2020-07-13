@@ -13,6 +13,8 @@ This repository currently contains the dataset of hand-written linzklar (written
 
 ## Data format
 
+### /data
+
 [/data](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data) contains all the raw data, where each JSON file is either an array of `{ "character": (annotation), "data" : (array of array of {x: number, y: number}) }`, or `{ "character": (annotation), "data" : (array of array of {x: number, y: number}), initialDotCaptured: true}`. Each array of coordinates corresponds to a stroke; an array of strokes makes up a character. Due to an oversight, for the first 30,126 samples the initial dot of every single stroke is absent from the data, and such files are marked with the lack of `initialDotCaptured: true`.
 
 Since Linzklar is (obviously) not in Unicode, and since the use of Private Use Area in a public place like a GitHub repository is to be frowned upon, each annotation is actually given in terms of a conventionally determined mapping to a Chinese character. Hence <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E7%8E%8B.png" width="30" height="30" /> is annotated as `王`, <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%86%A0.png" width="30" height="30" /> as `冠`, and so on.
@@ -68,6 +70,8 @@ To give an example,
 
 stores two samples that corresponds to <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%86%8D.png" width="30" height="30" /> (transcribed `再`) and <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E7%84%A1.png" width="30" height="30" /> (transcribed `無`). We can see that <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%86%8D.png" width="30" height="30" /> is made up of two strokes, and hence its `data` is an array of the two strokes comprising the character. 
 
+### /data_images/svg
+
 [/data_images/svg](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data_images/svg) contains all the raw data converted into svg images. `initial_dot_captured` contains the >20,000 samples whose initial dot of every stroke is properly recorded. `initial_dot_omitted` is made up of >50,000 samples stripped off of their initial dots (unintentionally for the first 30,126; intentionally for the remaining data). `initial_dot_captured_or_augmented` is a folder containing all the images in `initial_dot_captured`, as well as the first 30,126 samples with each of the missing initial dot inferred (by a simple linear interpolation) from the remaining dots.
 
 Inside each `/data_images/svg/initial_dot_*` are folders whose names are the annotations (given in terms of the Chinese characters), and each folder contains the svgs (supposedly) corresponding to the same character.
@@ -78,6 +82,8 @@ Inside each `/data_images/svg/initial_dot_*` are folders whose names are the ann
 $ cd converter
 $ cargo run --release
 ```
+
+### /data_images/png
 
 [/data_images/png](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data_images/png) is the same as `/data_images/svg`, except that it is converted to png with [mogrify](https://imagemagick.org/script/mogrify.php).
 
