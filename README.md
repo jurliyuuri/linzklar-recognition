@@ -17,6 +17,57 @@ This repository currently contains the dataset of hand-written linzklar (written
 
 Since Linzklar is (obviously) not in Unicode, and since the use of Private Use Area in a public place like a GitHub repository is to be frowned upon, each annotation is actually given in terms of a conventionally determined mapping to a Chinese character. Hence <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E7%8E%8B.png" width="30" height="30" /> is annotated as `王`, <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%86%A0.png" width="30" height="30" /> as `冠`, and so on.
 
+To give an example,
+
+```json
+[
+  {
+    "character": "再",
+    "data": [
+      [
+        { "x": 72, "y": 103 },
+        { "x": 74, "y": 110 },
+        { "x": 78, "y": 119 },
+        { "x": 84, "y": 128 },
+        { "x": 89, "y": 135 },
+        { "x": 94, "y": 139 },
+        { "x": 97, "y": 141 },
+        { "x": 97, "y": 141 }
+      ],
+      [
+        { "x": 159, "y": 89 },
+        { "x": 159, "y": 94 },
+        { "x": 159, "y": 106 },
+        { "x": 158, "y": 115 },
+        { "x": 152, "y": 136 },
+        { "x": 145, "y": 155 },
+        { "x": 134, "y": 172 },
+        { "x": 120, "y": 188 },
+        { "x": 108, "y": 198 },
+        { "x": 99, "y": 204 },
+        { "x": 95, "y": 206 },
+        { "x": 95, "y": 206 }
+      ]
+    ]
+   }, {
+    "character": "無",
+    "data": [
+      [
+        { "x": 95.12094116210938, "y": 92.58360290527344 },
+        { "x": 109.80926513671875, "y": 102.65560913085938 },
+        { "x": 114.42559814453125, "y": 107.27194213867188 },
+        { "x": 119.88128662109375, "y": 113.14726257324219 },
+        { "x": 127.43524169921875, "y": 122.79959106445312 },
+        { "x": 127.43524169921875, "y": 122.79959106445312 }
+      ]
+    ],
+    "initialDotCaptured": true
+  }
+]
+```
+
+stores two samples that corresponds to <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%86%8D.png" width="30" height="30" /> (transcribed `再`) and <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E7%84%A1.png" width="30" height="30" /> (transcribed `無`). We can see that <img src="https://jurliyuuri.github.io/lin-marn/%E7%87%90%E5%AD%97%E7%94%BB%E5%83%8F/%E5%86%8D.png" width="30" height="30" /> is made up of two strokes, and hence its `data` is an array of the two strokes comprising the character. 
+
 [/data_images/svg](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data_images/svg) contains all the raw data converted into svg images. `initial_dot_captured` contains the >20,000 samples whose initial dot of every stroke is properly recorded. `initial_dot_omitted` is made up of >50,000 samples stripped off of their initial dots (unintentionally for the first 30,126; intentionally for the remaining data). `initial_dot_captured_or_augmented` is a folder containing all the images in `initial_dot_captured`, as well as the first 30,126 samples with each of the missing initial dot inferred (by a simple linear interpolation) from the remaining dots.
 
 Inside each `/data_images/svg/initial_dot_*` are folders whose names are the annotations (given in terms of the Chinese characters), and each folder contains the svgs (supposedly) corresponding to the same character.
