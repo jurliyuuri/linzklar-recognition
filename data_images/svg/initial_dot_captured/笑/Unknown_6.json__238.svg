@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="60 96 61 96 64 95 70 94 82 90 86 89 101 86 105 86 105 86 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="78 61 78 64 77 76 76 94 74 115 74 132 74 143 74 150 74 153 75 153 77 153 78 153 81 153 87 151 93 147 96 145 96 145 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="96 58 96 57 95 61 94 72 92 94 92 119 92 141 94 148 94 148 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="151 53 150 55 148 62 147 70 149 74 149 74 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="128 79 126 79 130 78 143 75 160 70 175 69 182 69 182 69 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="136 89 136 90 136 95 138 102 143 107 146 108 146 108 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="168 86 165 89 161 96 156 105 151 113 150 114 150 114 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="122 127 121 127 123 127 132 124 144 119 148 118 165 113 178 112 186 110 188 110 188 110 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="152 83 152 82 151 82 151 85 150 94 146 113 137 135 128 154 122 164 121 167 119 171 119 172 119 172 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="150 129 149 129 148 129 146 129 147 132 151 137 161 147 164 150 171 156 176 159 195 171 213 180 219 183 219 183 " />
+        </svg>
