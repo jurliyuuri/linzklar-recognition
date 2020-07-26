@@ -52,6 +52,7 @@ fn gen_svg(strokes: &[Vec<Coord>]) -> String {
 }
 
 fn main() -> std::io::Result<()> {
+    use std::collections::HashMap;
     let mut file = File::open("../datalist.json")?;
     let mut contents = String::new();
     file.read_to_string(&mut contents)?;
@@ -63,6 +64,8 @@ fn main() -> std::io::Result<()> {
     })?;
 
     let mut total = 0;
+    
+    let mut char_count = HashMap::new();
 
     for src in filenames {
         let mut datasetfile = File::open(format!("../data/{}", src))?;
@@ -77,6 +80,8 @@ fn main() -> std::io::Result<()> {
         println!("Converting {} characters in {}.", characters.len(), src);
         total += characters.len();
         for (i, c) in characters.iter().enumerate() {
+            *char_count.entry(c.character.clone()).or_insert(0) += 1;
+
             if c.initial_dot_captured == Some(true) {
                 write_svg(&c.character, "initial_dot_captured", &src, i, &c.data)?;
 
@@ -129,7 +134,13 @@ fn main() -> std::io::Result<()> {
         }
     }
 
+    let mut count_vec: Vec<_> = char_count.iter().collect();
+    count_vec.sort_by(|a, b| b.1.cmp(a.1));
+    for (c, count) in count_vec {
+        println!("{}, {}", c, count);
+    }
     println!("Converted {} characters into svg.", total);
+
     Ok(())
 }
 
