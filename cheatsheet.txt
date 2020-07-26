@@ -7,7 +7,7 @@ touch datalist.json
 cd converter
 cargo run --release
 cd ../data_images/
-cp -r svg png
+cp -r -v svg/ png
 cd png
 find . -name '*.svg' -exec mogrify -format png {} +
 find . -name '*.svg' -type f -delete
