@@ -9,6 +9,8 @@ Linzklar (pronounced LINTS-claah), or Lanermic logogram, is a logographic writin
 
 ![](DDf9lFVUwAAWe7c.jpg)
 
+![](上行LT論・第一段落・送りpmcp字.png)
+
 This repository currently contains the dataset of hand-written linzklar (written by the builders of the conworld through a [Web app](https://github.com/jurliyuuri/linzi-recognition)), with which we aim to implement a handwriting linzklar input system in the future.
 
 ## Data format
