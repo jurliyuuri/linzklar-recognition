@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="64 76.25 79 95 81.5 97.5 84 102.5 85.25 105 86.5 107.5 86.5 108.75 86.5 107.5 86.5 107.5 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="101.5 83.75 116.5 96.25 116.5 97.5 116.5 97.5 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="151.5 50 169 58.75 170.25 58.75 171.5 60 171.5 61.25 169 66.25 165.25 72.5 154 88.75 141.5 102.5 127.75 116.25 114 128.75 107.75 132.5 107.75 132.5 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="47.75 152.5 67.75 155 71.5 153.75 79 150 84 146.25 87.75 145 90.25 143.75 90.25 142.5 89 143.75 86.5 150 84 155 81.5 163.75 77.75 175 74 188.75 67.75 207.5 62.75 217.5 59 223.75 52.75 230 52.75 230 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="86.5 172.5 114 170 124 162.5 140.25 152.5 151.5 147.5 161.5 142.5 174 137.5 180.25 135 184 133.75 185.25 132.5 186.5 132.5 187.75 133.75 187.75 135 190.25 138.75 191.5 140 192.75 141.25 195.25 145 196.5 150 200.25 163.75 200.25 175 199 188.75 195.25 208.75 191.5 221.25 187.75 231.25 181.5 238.75 175.25 246.25 169 251.25 160.25 255 155.25 253.75 150.25 248.75 136.5 231.25 126.5 212.5 117.75 196.25 112.75 183.75 110.25 177.5 110.25 177.5 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="125.25 163.75 121.5 185 119 190 115.25 203.75 110.25 218.75 106.5 228.75 102.75 232.5 101.5 233.75 101.5 233.75 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="156.5 158.75 155.25 181.25 152.75 190 146.5 206.25 140.25 223.75 131.5 238.75 124 248.75 124 248.75 " />
+        </svg>
