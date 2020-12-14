@@ -52,7 +52,18 @@ fn gen_svg(strokes: &[Vec<Coord>]) -> String {
 }
 
 fn main() -> std::io::Result<()> {
+    use std::env;
     use std::collections::HashMap;
+
+    let args: Vec<String> = env::args().collect();
+    let dry_run: bool = args.contains(&String::from("--dry-run"));
+
+    if dry_run {
+        println!("dry run: no svgs will be generated.");
+    }
+
+    let write_svg = if dry_run { nothing } else { write_svg_ };
+
     let mut file = File::open("../datalist.json")?;
     let mut contents = String::new();
     file.read_to_string(&mut contents)?;
@@ -64,7 +75,6 @@ fn main() -> std::io::Result<()> {
     })?;
 
     let mut total = 0;
-    
     let mut char_count = HashMap::new();
 
     for src in filenames {
@@ -77,7 +87,7 @@ fn main() -> std::io::Result<()> {
                 format!("Failed to interpret ../data/{}", src),
             )
         })?;
-        println!("Converting {} characters in {}.", characters.len(), src);
+        println!("{} {:>5} characters in {}.", if dry_run { "Found" } else { "Converting" }, characters.len(), src);
         total += characters.len();
         for (i, c) in characters.iter().enumerate() {
             *char_count.entry(c.character.clone()).or_insert(0) += 1;
@@ -144,7 +154,15 @@ fn main() -> std::io::Result<()> {
     Ok(())
 }
 
-fn write_svg(
+fn nothing(
+    _transcription: &str,
+    _folder_name: &str,
+    _src: &str,
+    _i: usize,
+    _strokes: &[Vec<Coord>],
+) -> std::io::Result<()> { Ok(())}
+
+fn write_svg_(
     transcription: &str,
     folder_name: &str,
     src: &str,

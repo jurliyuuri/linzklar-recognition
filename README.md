@@ -85,6 +85,8 @@ $ cd converter
 $ cargo run --release
 ```
 
+Using `cargo run -- --dry-run` will simply count the data, and will not generate the SVG files. This is considerably faster, and should be used when you only want to count the data.
+
 ### /data_images/png
 
 [/data_images/png](https://github.com/jurliyuuri/linzklar-recognition/tree/master/data_images/png) is the same as `/data_images/svg`, except that it is converted to png with [mogrify](https://imagemagick.org/script/mogrify.php).
