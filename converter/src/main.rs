@@ -76,8 +76,9 @@ fn main() -> std::io::Result<()> {
 
     let mut total = 0;
     let mut char_count = HashMap::new();
+    let len = filenames.len();
 
-    for src in filenames {
+    for (i, src) in filenames.iter().enumerate() {
         let mut datasetfile = File::open(format!("../data/{}", src))?;
         let mut datasetcontents = String::new();
         datasetfile.read_to_string(&mut datasetcontents)?;
@@ -88,7 +89,9 @@ fn main() -> std::io::Result<()> {
             )
         })?;
         println!(
-            "{} {:>5} characters in {}.",
+            "({:>3}/{}) {} {:>5} characters in {}.",
+            i,
+            len,
             if dry_run { "Found" } else { "Converting" },
             characters.len(),
             src
