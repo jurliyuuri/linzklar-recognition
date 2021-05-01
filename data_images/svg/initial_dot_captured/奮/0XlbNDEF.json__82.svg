@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="82 55 89 65 91 69 93 73 95 76 96 79 98 82 99 83 99 83 99 83 99 83 99 81 100 79 100 78 101 76 101 76 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="143 39 149 48 147 52 144 56 142 61 139 66 135 71 132 75 130 79 127 83 123 86 123 86 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="71 103 79 95 84 93 90 91 96 90 103 88 111 86 118 84 125 83 132 81 139 79 145 79 151 79 154 79 157 79 159 80 159 80 159 81 159 81 157 81 157 81 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="113 34 120 44 120 48 120 54 119 60 117 67 114 77 111 87 106 96 101 106 95 114 90 121 84 127 80 131 75 134 71 136 67 137 67 137 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="119 103 129 107 132 107 138 109 143 111 148 113 154 115 158 118 163 119 167 121 170 123 172 124 174 126 174 127 174 127 172 128 169 129 169 129 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="95 135 103 142 105 145 107 149 110 152 111 153 111 154 112 154 113 153 114 152 115 151 115 151 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="139 123 148 119 147 120 146 123 144 125 143 128 140 132 137 137 135 143 131 150 126 157 120 166 114 174 107 183 99 191 93 198 86 205 79 211 73 217 67 220 62 223 57 225 53 226 49 224 49 224 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="57 168 68 167 72 167 76 167 80 167 84 168 88 169 93 170 98 171 103 175 109 178 115 182 122 187 130 192 138 199 147 205 156 211 166 218 175 223 186 228 195 232 204 235 213 237 219 238 225 239 225 239 " />
+        </svg>
