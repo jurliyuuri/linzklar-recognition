@@ -94,7 +94,7 @@ fn main() -> std::io::Result<()> {
         })?;
         println!(
             "({:>3}/{}) {} {:>5} characters in {}.",
-            i,
+            i + 1,
             len,
             if dry_run { "Found" } else { "Converting" },
             characters.len(),
