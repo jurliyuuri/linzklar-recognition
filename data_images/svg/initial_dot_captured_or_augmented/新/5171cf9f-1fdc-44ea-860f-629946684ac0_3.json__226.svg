@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="85 81 102 75 112 71 122 68 130 66 135 65 139 65 139 66 139 66 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="80 108 80 119 81 127 82 135 82 144 82 147 82 148 82 148 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="88 107 108 100 124 95 138 91 149 87 156 85 159 85 158 88 157 92 153 102 151 111 149 118 148 123 146 127 146 127 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="115 69 116 83 116 84 116 88 116 88 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="120 97 121 116 121 124 120 130 120 135 119 136 119 136 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="96 128 106 122 116 118 127 114 136 112 141 112 141 115 139 116 139 116 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="94 147 107 142 112 140 122 137 133 134 136 134 137 135 136 135 136 135 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="107 159 108 170 108 181 106 194 103 207 99 220 98 224 96 225 96 225 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="140 149 145 174 147 186 149 197 152 204 154 209 155 211 156 212 156 211 153 209 146 204 140 201 137 200 137 200 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="68 196 80 189 86 186 104 180 135 172 155 169 171 169 180 169 185 169 187 172 188 173 188 173 " />
+        </svg>

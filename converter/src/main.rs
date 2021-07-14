@@ -54,6 +54,10 @@ fn gen_svg(strokes: &[Vec<Coord>]) -> String {
 fn main() -> std::io::Result<()> {
     use std::collections::HashMap;
     use std::env;
+    #[allow(clippy::unnecessary_wraps)]
+    fn nothing(_: &str, _: &str, _: &str, _: usize, _: &[Vec<Coord>]) -> std::io::Result<()> {
+        Ok(())
+    }
 
     let args: Vec<String> = env::args().collect();
     let dry_run: bool = args.contains(&String::from("--dry-run"));
@@ -76,8 +80,9 @@ fn main() -> std::io::Result<()> {
 
     let mut total = 0;
     let mut char_count = HashMap::new();
+    let len = filenames.len();
 
-    for src in filenames {
+    for (i, src) in filenames.iter().enumerate() {
         let mut datasetfile = File::open(format!("../data/{}", src))?;
         let mut datasetcontents = String::new();
         datasetfile.read_to_string(&mut datasetcontents)?;
@@ -88,7 +93,9 @@ fn main() -> std::io::Result<()> {
             )
         })?;
         println!(
-            "{} {:>5} characters in {}.",
+            "({:>3}/{}) {} {:>5} characters in {}.",
+            i + 1,
+            len,
             if dry_run { "Found" } else { "Converting" },
             characters.len(),
             src
@@ -154,21 +161,11 @@ fn main() -> std::io::Result<()> {
     for (c, count) in count_vec {
         println!("{}, {}", c, count);
     }
-    
+
     if !dry_run {
         println!("Converted {} characters into svg.", total);
     }
 
-    Ok(())
-}
-
-fn nothing(
-    _transcription: &str,
-    _folder_name: &str,
-    _src: &str,
-    _i: usize,
-    _strokes: &[Vec<Coord>],
-) -> std::io::Result<()> {
     Ok(())
 }
 

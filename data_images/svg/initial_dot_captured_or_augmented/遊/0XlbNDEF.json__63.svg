@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="68 65 75 74 77 76 79 79 80 82 81 85 83 87 83 88 85 90 86 91 86 91 87 92 87 91 87 91 87 90 87 88 87 88 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="100 60 108 68 109 71 110 72 111 74 111 75 111 77 111 78 111 79 111 79 111 79 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="151 44 155 55 155 60 154 66 152 71 151 77 149 83 147 88 144 93 142 97 139 101 136 103 135 105 135 105 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="40 129 52 125 58 124 63 123 71 121 79 119 87 116 97 113 108 109 119 106 131 102 142 99 151 97 159 95 166 95 172 94 176 95 179 95 182 95 183 95 183 95 183 95 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="76 146 79 157 79 160 78 163 78 167 77 171 77 174 76 176 76 178 75 179 75 181 75 182 75 183 75 183 76 183 77 183 79 183 80 182 83 181 86 179 91 178 96 176 102 174 109 171 115 167 123 164 130 162 136 159 142 158 147 156 150 157 151 158 152 159 152 161 152 161 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="164 119 163 123 163 131 163 135 164 139 165 144 166 150 167 155 167 159 168 164 169 169 169 172 169 175 169 178 169 179 168 179 167 179 166 179 165 178 163 177 163 175 161 175 161 175 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="112 121 117 131 119 134 119 140 119 147 119 156 118 166 115 177 113 189 111 199 107 210 105 219 101 226 98 231 94 235 90 239 87 240 87 240 " />
+        </svg>
