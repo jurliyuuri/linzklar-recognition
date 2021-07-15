@@ -135,14 +135,12 @@ fn main() -> std::io::Result<()> {
                 let mut initial_dot_augmented = Vec::new();
                 for stroke in &c.data {
                     let mut k = stroke.clone();
-                    if k.len() < 2 {
-                        // cannot augment
-                        initial_dot_augmented.push(k);
-                    } else {
+                    if k.len() >= 2 {
+                        // can augment
                         let stroke_neg1 = stroke[0] - (stroke[1] - stroke[0]);
                         k.insert(0, stroke_neg1);
-                        initial_dot_augmented.push(k);
                     }
+                    initial_dot_augmented.push(k);
                 }
 
                 write_svg(
