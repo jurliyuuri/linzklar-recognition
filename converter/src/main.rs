@@ -59,8 +59,7 @@ fn main() -> std::io::Result<()> {
         Ok(())
     }
 
-    let args: Vec<String> = env::args().collect();
-    let dry_run: bool = args.contains(&String::from("--dry-run"));
+    let dry_run: bool = env::args().any(|x| x == *"--dry-run");
 
     if dry_run {
         println!("dry run: no svgs will be generated.");
@@ -105,12 +104,12 @@ fn main() -> std::io::Result<()> {
             *char_count.entry(c.character.clone()).or_insert(0) += 1;
 
             if c.initial_dot_captured == Some(true) {
-                write_svg(&c.character, "initial_dot_captured", &src, i, &c.data)?;
+                write_svg(&c.character, "initial_dot_captured", src, i, &c.data)?;
 
                 write_svg(
                     &c.character,
                     "initial_dot_captured_or_augmented",
-                    &src,
+                    src,
                     i,
                     &c.data,
                 )?;
@@ -125,12 +124,12 @@ fn main() -> std::io::Result<()> {
                 write_svg(
                     &c.character,
                     "initial_dot_omitted",
-                    &src,
+                    src,
                     i,
                     &initial_dot_omitted,
                 )?;
             } else {
-                write_svg(&c.character, "initial_dot_omitted", &src, i, &c.data)?;
+                write_svg(&c.character, "initial_dot_omitted", src, i, &c.data)?;
 
                 let mut initial_dot_augmented = Vec::new();
                 for stroke in &c.data {
@@ -146,7 +145,7 @@ fn main() -> std::io::Result<()> {
                 write_svg(
                     &c.character,
                     "initial_dot_captured_or_augmented",
-                    &src,
+                    src,
                     i,
                     &initial_dot_augmented,
                 )?;
