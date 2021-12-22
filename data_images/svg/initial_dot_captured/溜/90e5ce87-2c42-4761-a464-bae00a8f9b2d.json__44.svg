@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="72 53 73 54 74 59 75 62 76 63 76 64 77 65 78 67 80 69 83 75 84 76 84 77 85 78 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="174 43 173 45 171 47 170 48 168 52 157 65 157 65 156 66 152 70 143 78 140 81 138 82 136 84 131 88 131 88 126 92 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="47 113 49 113 54 112 61 110 63 110 66 110 71 109 81 108 88 107 96 106 98 105 101 105 114 102 127 100 136 99 137 98 140 98 152 95 152 95 168 91 174 88 174 88 177 87 180 86 181 85 182 85 186 82 186 82 188 80 190 78 190 78 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="85 124 85 125 81 135 79 142 77 147 76 147 76 148 72 154 63 167 60 170 60 171 58 173 42 190 42 190 40 192 40 192 38 193 35 194 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="89 166 89 166 93 166 95 167 100 168 106 171 107 172 109 172 110 173 112 174 113 174 114 174 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="159 110 158 112 155 121 151 132 151 133 150 135 145 149 142 157 141 159 136 169 130 182 128 185 128 185 125 189 123 193 115 202 110 208 108 210 107 211 107 211 106 212 105 212 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="147 152 147 152 149 153 149 153 150 155 152 156 152 156 153 158 157 161 161 165 162 167 165 170 171 176 177 183 177 184 178 184 178 185 180 186 189 195 194 198 201 203 204 205 209 208 214 211 217 212 217 212 " />
+        </svg>

@@ -24,8 +24,7 @@ find . -name '*.svg' -type f -delete
 cd ../../
 cp -r data~/ data
 rm -rf data~
-cp -r data_images/ data_images~
-rm -rf data_images
-mv data_images~ data_images
+cp -r data_images~/ data_images
+rm -rf data_images~
 【Manually merge datalist.json and datalist~.json】
 ```

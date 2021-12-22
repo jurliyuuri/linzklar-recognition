@@ -81,8 +81,12 @@ fn main() -> std::io::Result<()> {
     let mut char_count = HashMap::new();
     let len = filenames.len();
 
-    for (i, src) in filenames.iter().enumerate() {
-        let mut datasetfile = File::open(format!("../data/{}", src))?;
+    // Iterated in reverse order so that, if a newly-added line is wrong, it fails early
+    for (i, src) in filenames.iter().rev().enumerate() {
+        let mut datasetfile = File::open(format!("../data/{}", src)).map_err(|e| {
+            eprintln!("Cannot find the file ../data/{}", src);
+            e
+        })?;
         let mut datasetcontents = String::new();
         datasetfile.read_to_string(&mut datasetcontents)?;
         let characters: Vec<CharData> = serde_json::from_str(&datasetcontents).map_err(|_| {
