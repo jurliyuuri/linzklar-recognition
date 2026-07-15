@@ -1,0 +1,16 @@
+[project]
+name = "char-convnext"
+version = "0.1.0"
+description = "Fine-tune ConvNeXt-Tiny for handwritten linzklar character recognition"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.4",
+    "pillow>=12.2.0",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "tqdm>=4.66.5",
+]
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu128"
