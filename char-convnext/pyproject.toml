@@ -6,11 +6,21 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.4.4",
+    "onnx>=1.22.0",
+    "onnxconverter-common>=1.16.0",
+    "onnxruntime-gpu>=1.27.0",
+    "onnxsim>=0.6.5",
     "pillow>=12.2.0",
     "torch>=2.11.0",
     "torchvision>=0.26.0",
     "tqdm>=4.66.5",
 ]
 
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+
 [[tool.uv.index]]
+name = "pytorch-cu128"
 url = "https://download.pytorch.org/whl/cu128"
+explicit = true

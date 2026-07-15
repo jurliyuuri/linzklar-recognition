@@ -9,7 +9,7 @@ Fine-tune **ConvNeXt-Tiny** on handwritten [Linzklar](https://github.com/jurliyu
 uv sync
 ```
 
-Dependencies: `torch`, `torchvision` (CUDA 12.8 wheels by default), `pillow`, `tqdm`, `numpy`.
+Dependencies: `torch`, `torchvision` (CUDA 12.8 wheels by default), `pillow`, `tqdm`, `numpy`, plus `onnx` / `onnxsim` / `onnxruntime-gpu` for export and ORT inference.
 
 Confirm GPU:
 
@@ -80,7 +80,7 @@ uv run python evaluate.py --split all   # entire dataset (no split file needed f
 
 Prints top-1 / top-5 accuracy, weakest classes, and common confusions.
 
-## Predict
+## Predict (PyTorch)
 
 ```bash
 uv run python predict.py \
@@ -90,6 +90,41 @@ uv run python predict.py \
 ```
 
 `--image` may be a single file or a directory.
+
+## Export ONNX
+
+Export the best checkpoint to a simplified ONNX graph (dynamic batch, logits output):
+
+```bash
+uv run python export_onnx.py
+# optional FP16 (needs: uv add onnxconverter-common)
+uv run python export_onnx.py --fp16
+```
+
+| Artifact | Description |
+|----------|-------------|
+| `outputs/onnx/convnext_tiny_linzklar.onnx` | Optimized FP32 model |
+| `outputs/onnx/convnext_tiny_linzklar_fp16.onnx` | Optional FP16 model |
+| `outputs/onnx/model_meta.json` | Class map, image size, mean/std, I/O names |
+
+**Graph contract**
+
+- Input `input`: `N×3×128×128` float32 (NCHW), dynamic batch
+- Output `logits`: `N×412` (no softmax in the graph)
+- Preprocess outside the model: RGB → resize 128 → ImageNet normalize
+
+The exporter runs **onnxsim** and verifies PyTorch vs ONNX Runtime parity by default.
+
+### Predict (ONNX Runtime)
+
+```bash
+uv run python predict_onnx.py \
+  --onnx outputs/onnx/convnext_tiny_linzklar.onnx \
+  --image ../data_images/png/initial_dot_captured_or_augmented/一/some.png \
+  --top-k 5
+```
+
+Uses `CUDAExecutionProvider` when available, otherwise CPU.
 
 ## Notes
 
