@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>燐字手書き認識 · Linzklar recognizer</title>
+  <link rel="stylesheet" href="./recognizer/style.css" />
+  <!--
+    Serve from repo root (GitHub Pages or local):
+      python -m http.server 8080
+      → http://localhost:8080/recognizer.html
+
+    Model path (commit for Pages; not from gitignored outputs/):
+      recognizer/models/convnext_tiny_linzklar_fp16.onnx
+      recognizer/models/model_meta.json
+
+    Refresh after re-export:
+      cp char-convnext/outputs/onnx/convnext_tiny_linzklar_fp16.onnx recognizer/models/
+      cp char-convnext/outputs/onnx/model_meta_fp16.json recognizer/models/model_meta.json
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>燐字手書き認識</h1>
+      <p class="sub">
+        ConvNeXt-Tiny (FP16 ONNX) ·
+        <a href="./index.html">index</a>
+      </p>
+    </header>
+
+    <div id="status" class="status" data-state="loading">
+      <span id="status-text" class="status-text">Initializing…</span>
+      <span id="meta-bits" class="meta-bits"></span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="draw" width="512" height="512" aria-label="Drawing canvas"></canvas>
+    </div>
+
+    <div class="toolbar">
+      <button type="button" id="btn-recognize" class="primary" disabled>Recognize</button>
+      <button type="button" id="btn-clear" disabled>Clear</button>
+      <label class="stroke">
+        Stroke
+        <input id="stroke-width" type="range" min="2" max="24" value="8" />
+      </label>
+      <span id="latency" class="meta-bits"></span>
+    </div>
+
+    <section class="results" id="results-section" aria-live="polite">
+      <h2>Top predictions</h2>
+      <p id="results-empty" class="empty">Draw a character, then press Recognize.</p>
+      <ol id="results-list"></ol>
+    </section>
+
+    <footer>
+      Each result shows the linzklar glyph and Chinese annotation
+      (e.g. linzklar【漢】) using
+      <a href="https://yasusho.github.io/linmarn_font_project/fonts/rounded/linzklar_rounded.woff">Linzklar Rounded</a>.
+      Inference runs entirely in your browser via ONNX Runtime Web.
+    </footer>
+  </div>
+
+  <script src="./recognizer/app.js"></script>
+</body>
+</html>

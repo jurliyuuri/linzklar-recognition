@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Linzklar Rounded";
+  src: url("https://yasusho.github.io/linmarn_font_project/fonts/rounded/linzklar_rounded.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #0f1419;
+  --panel: #1a2332;
+  --border: #2d3a4d;
+  --text: #e7ecf3;
+  --muted: #8b9bb4;
+  --accent: #5b9fd4;
+  --accent-dim: #3a6d94;
+  --ok: #3ecf8e;
+  --warn: #e6b84d;
+  --err: #e85d5d;
+  --canvas-bg: #ffffff;
+  --stroke: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+  font-weight: 650;
+}
+
+header .sub {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.status[data-state="loading"] .status-text { color: var(--warn); }
+.status[data-state="ready"] .status-text { color: var(--ok); }
+.status[data-state="error"] .status-text { color: var(--err); }
+
+.meta-bits {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.canvas-wrap {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+#draw {
+  display: block;
+  width: 100%;
+  max-width: 512px;
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  background: var(--canvas-bg);
+  border-radius: 6px;
+  touch-action: none;
+  cursor: crosshair;
+  box-shadow: inset 0 0 0 1px #ccc;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+label.stroke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+label.stroke input[type="range"] {
+  width: 100px;
+}
+
+.results {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.results h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.results .empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.results ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.results li {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(4.5rem, auto) 1fr auto;
+  gap: 0.5rem 0.65rem;
+  align-items: center;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.results li:first-child {
+  border-top: none;
+}
+
+.results .rank {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.results .label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.results .label-han {
+  font-weight: 600;
+}
+
+/* Same code point, rendered with linzklar font */
+.results .label-linzklar {
+  font-family: "Linzklar Rounded", sans-serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.results .label-brackets {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.results .bar-wrap {
+  height: 8px;
+  background: #0c1016;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.results .bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent));
+  width: 0%;
+  transition: width 0.2s ease;
+}
+
+.results .prob {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  color: var(--muted);
+  min-width: 3.5rem;
+  text-align: right;
+}
+
+footer {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+footer code {
+  font-size: 0.78rem;
+  color: #a8b8d0;
+}
