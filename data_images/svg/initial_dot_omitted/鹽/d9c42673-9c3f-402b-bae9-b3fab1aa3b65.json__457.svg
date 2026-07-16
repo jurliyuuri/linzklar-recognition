@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="115 80 115 80 116 80 115 79 113 80 111 81 108 83 105 85 101 87 97 89 94 90 90 92 87 95 82 98 80 100 78 103 77 107 76 111 76 117 77 122 77 128 78 135 78 144 79 149 80 154 81 158 81 160 82 162 82 163 83 163 84 163 87 161 90 158 93 154 96 149 98 143 100 138 100 136 101 135 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="102 130 103 131 104 132 105 134 106 136 107 139 109 142 111 146 113 149 116 152 118 154 120 155 123 153 125 152 126 151 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="155 64 154 63 154 62 151 67 148 73 145 80 142 88 139 96 136 104 133 111 131 117 129 121 127 124 126 126 126 126 126 126 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="135 113 138 114 142 115 145 116 147 117 149 118 152 119 154 120 157 120 158 120 160 119 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="186 69 185 73 182 78 176 88 173 94 169 101 165 108 162 115 158 121 155 126 152 131 150 133 149 135 149 134 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="160 121 165 120 170 119 178 118 183 119 187 120 191 121 194 122 196 123 197 125 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="148 142 147 142 148 142 150 142 153 141 156 141 161 140 169 138 175 137 181 136 186 134 190 134 192 134 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="134 179 134 178 133 178 133 178 135 177 137 177 140 176 145 175 150 175 158 175 165 175 172 176 180 176 188 177 195 177 203 177 209 178 215 179 218 180 " />
+        </svg>

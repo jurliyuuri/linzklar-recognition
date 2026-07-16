@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="89 58 90 59 92 61 93 64 94 69 95 73 96 78 97 83 97 88 98 93 98 96 98 99 98 101 98 101 98 100 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="99 72 101 68 105 63 110 58 118 51 125 47 131 43 137 41 142 40 147 39 150 40 152 42 154 46 153 55 150 63 146 72 139 82 132 92 124 101 120 105 117 109 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="88 105 89 104 94 102 98 101 104 99 107 99 114 98 120 97 125 98 129 99 130 101 131 103 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="62 148 59 153 58 157 57 164 57 169 57 175 57 178 57 186 57 190 57 193 57 195 57 196 57 195 58 192 58 190 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="64 172 66 167 69 162 73 158 83 150 86 148 90 147 92 147 94 148 95 151 95 155 94 163 89 176 88 180 81 192 79 195 71 201 67 203 63 205 60 205 59 205 58 206 57 206 58 205 62 205 66 204 71 202 77 200 84 197 91 194 100 190 104 188 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="131 148 130 151 127 158 126 161 123 170 121 177 120 183 119 189 118 194 118 197 117 200 118 201 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="128 157 131 153 135 150 142 147 147 145 152 144 158 144 162 145 166 146 170 149 172 153 174 158 171 169 169 174 158 189 154 193 145 201 141 204 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="113 209 113 209 115 209 119 209 124 209 135 209 144 209 153 209 158 209 174 211 178 212 " />
+        </svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="96 76 95 75 93 75 90 75 85 78 79 82 69 89 63 94 58 98 54 102 50 106 48 109 46 112 46 116 45 119 46 124 47 128 48 133 49 137 50 142 51 146 52 150 54 153 55 156 57 158 58 160 60 161 62 162 65 162 68 160 71 157 75 153 78 147 80 144 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="78 121 78 122 80 126 82 129 84 133 86 138 88 143 90 148 91 152 93 155 94 157 95 158 97 158 99 157 100 156 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="130 58 129 60 127 65 124 72 121 80 116 92 113 100 110 107 108 113 106 118 104 121 103 123 103 124 103 124 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="114 102 118 103 121 104 125 105 128 106 130 107 132 108 134 108 136 107 138 107 140 106 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="167 56 165 60 163 66 160 75 156 84 152 92 149 101 145 109 141 115 138 121 136 125 133 129 133 129 132 129 132 126 133 124 135 120 140 113 142 111 146 107 153 102 157 100 161 99 165 99 168 99 171 100 174 101 175 102 176 103 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="126 142 125 143 125 143 127 143 129 143 134 142 138 142 143 141 147 140 151 139 155 138 159 137 162 137 164 137 165 139 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="111 197 108 199 106 200 105 201 105 201 105 201 106 201 108 201 112 201 118 201 125 201 138 201 147 200 157 199 167 199 172 199 177 200 " />
+        </svg>

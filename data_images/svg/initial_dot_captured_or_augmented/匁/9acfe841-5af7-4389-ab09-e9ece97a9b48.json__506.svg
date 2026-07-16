@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="67 85 67 85 68 83 72 82 77 82 82 82 89 82 95 83 101 84 106 84 112 85 116 86 118 87 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="65 116 64 117 62 119 64 119 66 120 71 120 77 120 83 120 90 119 97 118 103 118 107 119 108 121 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="73 150 71 151 68 152 66 153 66 153 70 152 75 150 82 148 89 145 97 141 106 137 115 131 120 127 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="95 53 93 55 91 61 89 72 87 86 86 110 86 127 87 143 88 158 90 171 91 182 92 190 94 196 95 198 96 199 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="124 107 126 104 131 100 137 96 145 92 152 87 160 81 168 75 179 66 184 62 188 58 190 57 190 57 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="162 81 159 84 152 93 147 102 142 113 138 124 135 136 133 148 131 160 130 176 129 185 129 192 129 198 129 202 129 204 128 205 128 205 128 204 127 203 127 202 128 201 130 196 133 191 136 186 140 181 144 176 148 171 153 165 158 159 165 153 168 149 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="148 136 148 136 146 134 147 129 148 124 151 118 155 111 160 105 165 99 171 95 176 93 181 92 186 96 188 102 188 111 188 122 186 134 184 146 183 158 182 170 183 180 186 196 189 204 192 211 196 217 198 219 205 224 210 225 215 224 221 222 229 218 231 216 235 212 237 210 237 208 235 205 233 203 229 201 228 200 " />
+        </svg>

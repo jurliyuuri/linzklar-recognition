@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="61 85 62 85 65 85 71 86 77 86 83 87 88 87 94 86 100 86 105 85 110 83 114 81 117 80 118 81 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="69 120 67 121 66 121 66 121 69 121 72 120 77 119 82 117 87 115 93 114 98 113 100 113 102 113 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="65 142 64 142 63 142 64 143 67 143 70 143 75 143 81 143 87 142 93 140 101 137 109 132 117 126 122 122 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="99 63 99 65 100 72 100 83 98 97 97 114 94 132 92 149 91 165 90 178 89 188 89 195 90 201 93 204 95 204 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="124 94 128 90 134 87 141 83 146 81 151 78 156 76 162 74 167 71 172 69 177 66 179 65 181 64 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="157 70 153 74 150 81 147 89 143 101 138 120 133 134 129 148 125 161 122 173 119 183 117 190 115 195 114 200 114 202 113 203 113 203 114 202 115 200 117 196 120 191 124 186 130 176 135 170 140 163 145 157 150 150 155 145 157 143 159 141 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="137 129 138 128 140 126 145 122 149 118 153 113 158 109 162 105 165 103 167 102 169 103 170 108 169 124 167 137 166 151 164 164 164 176 163 187 163 195 164 202 165 207 167 212 168 215 171 216 175 216 180 214 186 211 192 206 198 201 203 195 207 187 208 184 208 180 208 176 207 175 " />
+        </svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="92 60 93 61 95 62 98 68 99 74 100 83 101 94 101 107 101 120 100 132 100 144 101 154 101 165 101 170 101 173 100 174 99 173 97 169 94 163 91 155 90 151 88 146 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="64 105 64 105 64 105 66 106 67 107 69 108 70 110 70 111 71 114 70 118 69 123 68 127 67 132 65 136 63 140 62 142 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="57 149 59 148 62 146 67 143 71 140 76 136 81 132 86 128 91 124 95 120 97 118 99 117 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="126 82 126 81 126 81 125 83 123 86 119 91 116 96 111 101 107 106 103 111 98 117 97 118 94 121 94 121 93 123 94 124 96 125 100 127 108 131 115 135 123 138 131 141 140 143 145 144 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="153 91 154 88 156 86 161 81 165 78 170 75 176 72 182 69 188 66 193 63 201 60 205 58 206 58 207 58 208 59 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="167 83 165 85 162 91 160 98 159 105 159 113 159 120 159 126 160 132 162 139 163 141 165 144 170 145 172 145 175 143 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="194 82 195 82 194 83 193 90 191 97 188 106 187 112 180 130 175 143 168 157 161 169 158 174 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="134 183 133 178 135 174 139 171 145 168 151 165 158 162 167 161 176 160 186 160 199 162 207 164 211 167 215 169 218 172 " />
+        </svg>

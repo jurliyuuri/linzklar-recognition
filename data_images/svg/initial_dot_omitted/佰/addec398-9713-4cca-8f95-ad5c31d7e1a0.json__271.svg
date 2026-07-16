@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="71 88 70 86 71 85 73 82 76 80 79 77 83 74 88 72 90 71 98 68 100 67 110 65 115 65 119 65 122 65 127 66 129 67 133 69 134 69 135 74 134 78 132 83 128 88 124 93 120 98 118 100 116 102 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="92 101 92 101 92 100 92 100 95 101 98 102 102 104 104 105 111 108 114 110 121 114 123 115 129 119 130 120 131 121 132 123 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="73 143 70 143 69 143 69 143 70 143 73 143 78 142 83 142 89 142 96 142 103 142 113 142 120 142 126 142 131 141 133 141 134 140 " />
+        <polyline stroke="black" stroke-width="3" stroke-linecap="round" fill="transparent" stroke-linejoin="round" points="109 129 107 132 106 134 103 143 102 146 98 158 97 162 92 174 91 178 87 185 80 193 77 195 71 198 66 199 63 199 62 199 59 199 59 199 59 198 60 198 62 197 67 196 73 196 81 196 95 196 107 196 120 195 127 195 149 195 155 195 " />
+        </svg>
