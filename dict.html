@@ -1,6 +1,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<style>
+	canvas {border: 3px solid #dba373; margin: 15px;}
+</style>
 </head>
 <body>
 <div id="load">ロード中</div>
@@ -20,6 +23,7 @@ let rinzis = [];
 		let filerinzi = await rinzifile.json();
 		filearray.push(filerinzi);
 	})()));
+	console.log(filearray);
 	rinzis = filearray.flat();
 	document.getElementById("load").innerText = "";
 })();
@@ -29,7 +33,7 @@ document.getElementById("seisei").addEventListener("click",function(){
 	jis.innerHTML = "";
 	
 	let inputrinzi = document.getElementById("ji").value;
-	rinzis.filter(x=>x.character == inputrinzi).forEach(rinzi=>{
+	rinzis.filter((x)=>x.character == inputrinzi).forEach(rinzi=>{
 		let canvas = document.createElement("canvas");
 		canvas.setAttribute("width", "256px");
 		canvas.setAttribute("height", "256px");
